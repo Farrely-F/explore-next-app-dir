@@ -1,11 +1,13 @@
 import { NeonGradientCard } from "@/components/magicui/neon-gradient-card";
+import TextRevealByWord from "@/components/magicui/text-reveal";
+import WordRotate from "@/components/magicui/word-rotate";
 import { LearningCard } from "@/components/ui/Card";
 import { learn } from "@/constants/learn";
 
 export default function Home() {
   return (
     <main className="px-4 md:px-8 py-16">
-      <div className="flex flex-col min-h-dvh w-full">
+      <div className="flex flex-col w-full">
         <section id="title" className="space-y-4 text-center">
           <h1>
             Explore NEXT<span className="text-xs">Js</span>{" "}
@@ -31,10 +33,14 @@ export default function Home() {
             </div>
             <p>and so on ...</p>
           </div>
-          <div className="self-center w-full max-w-sm space-y-4">
-            <strong className="text-4xl text-balance inline-block">
-              Build, Ship, and Deploy with <b>NEXT 14</b>
-            </strong>
+          <div className="self-start w-full max-w-sm space-y-4">
+            <div className="flex flex-col lg:flex-row lg:items-center lg:gap-4 min-h-[80px]">
+              <p className="text-2xl text-balance">Create Apps that</p>
+              <WordRotate
+                words={["Scale", "Fast", "Reliable", "Enjoyable"]}
+                className="text-4xl"
+              />
+            </div>
             <p>Experience the power of Next 14 and APP directory</p>
             <blockquote>
               <em>
@@ -43,6 +49,9 @@ Next.js is trusted by some of the biggest names on the web. "`}
               </em>
             </blockquote>
           </div>
+        </section>
+        <section>
+          <TextRevealByWord text="APP Router Will Change The Way You Build Applications" />
         </section>
         <section>
           <div className="w-full max-w-fit mx-auto min-h-[700px] flex items-center">

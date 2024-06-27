@@ -16,7 +16,10 @@ export default function SlidesContainer({
   const path = usePathname();
 
   return (
-    <ShineBorder color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}>
+    <ShineBorder
+      color={["#A07CFE", "#FE8FB5", "#FFBE7B"]}
+      className="2xl:max-w-7xl mx-auto"
+    >
       <div
         className={cn(
           "grid grid-cols-10 rounded-xl overflow-clip relative",
